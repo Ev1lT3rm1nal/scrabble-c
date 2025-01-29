@@ -1,0 +1,19 @@
+.{
+    .name = "Proyecto2",
+    .version = "0.0.0",
+    .dependencies = .{
+        .raylib = .{
+            .url = "git+https://github.com/raysan5/raylib?ref=5.5#c1ab645ca298a2801097931d1079b10ff7eb9df8",
+            .hash = "1220d93782859726c2c46a05450615b7edfc82b7319daac50cbc7c3345d660b022d7",
+        },
+        .raygui = .{
+            .url = "git+https://github.com/raysan5/raygui#1f813711063f0ff01bd3a89d50ebc17c5412e83c",
+            .hash = "12208f66b71749c6497ade9b3ca46d4d3df61fda22387f73074f59769e5711ed3ad1",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
