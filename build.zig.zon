@@ -1,14 +1,16 @@
 .{
-    .name = "scrabble",
+    .name = .Proyecto2,
     .version = "0.0.0",
+    .fingerprint = 0x2af6e5841bc2e3e7, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.14.0",
     .dependencies = .{
         .raylib = .{
-            .url = "git+https://github.com/raysan5/raylib?ref=5.5#c1ab645ca298a2801097931d1079b10ff7eb9df8",
-            .hash = "1220d93782859726c2c46a05450615b7edfc82b7319daac50cbc7c3345d660b022d7",
+            .url = "git+https://github.com/raysan5/raylib#f1385f3aec24a29ff50164e5c86337dbd005506a",
+            .hash = "raylib-5.5.0-AAAAAKVFzQDBCXvg8rGIQ5JgOXiiisWS6S7aLx8tzEIY",
         },
         .raygui = .{
-            .url = "git+https://github.com/raysan5/raygui#1f813711063f0ff01bd3a89d50ebc17c5412e83c",
-            .hash = "12208f66b71749c6497ade9b3ca46d4d3df61fda22387f73074f59769e5711ed3ad1",
+            .url = "git+https://github.com/raysan5/raygui#9a95871701a5fc63bea35eab73fef6414e048b73",
+            .hash = "N-V-__8AAPZ7UgBpukXNy27vajQpyiPrEZpV6jOLzI6-Otc_",
         },
     },
     .paths = .{

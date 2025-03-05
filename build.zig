@@ -39,21 +39,26 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(scrabble);
 
-    var graphics = b.addStaticLibrary(.{
-        .name = "graphics",
+    var graphics_mod = b.createModule(.{
         .target = target,
         .optimize = optimize,
         .link_libc = true,
     });
 
-    graphics.linkLibrary(scrabble);
-    graphics.linkLibrary(raylib_artifact);
+    graphics_mod.linkLibrary(scrabble);
+    graphics_mod.linkLibrary(raylib_artifact);
 
-    graphics.addCSourceFile(.{
+    graphics_mod.addCSourceFile(.{
         .file = b.path("src/graphic.c"),
     });
 
-    graphics.defineCMacro("ASSETS_PATH", "\"./assets/\"");
+    graphics_mod.addCMacro("ASSETS_PATH", "\"./assets/\"");
+
+    const graphics = b.addLibrary(.{
+        .name = "graphics",
+        .root_module = graphics_mod,
+        .linkage = .dynamic,
+    });
 
     b.installArtifact(graphics);
 
