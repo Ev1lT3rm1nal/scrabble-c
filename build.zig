@@ -63,7 +63,7 @@ pub fn build(b: *std.Build) void {
     b.installArtifact(graphics);
 
     var exe = b.addExecutable(.{
-        .name = "game",
+        .name = "scrabble",
         .target = target,
         .optimize = optimize,
         .link_libc = true,
